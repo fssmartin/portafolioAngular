@@ -10,18 +10,20 @@ export class InfoPaginaService {
   loading:boolean=true;
   info:InfoPagina={};
 
+  productos:any={};
+
   equipo:any[]=[];
 
   constructor( private http:HttpClient) {
 
       this.getDataGlobal();
-      this.getDataEquipo();
+      this.getDataEquipo(); 
   }
     
   getDataGlobal(){
        
       this.loading = true;
-      console.log("llamando al servicio");
+
 
       this.http.get('../../assets/data/db.json')
       .subscribe(
@@ -36,7 +38,7 @@ export class InfoPaginaService {
   getDataEquipo(){
 
     this.loading = true;
-    console.log("llamando al servicio");
+    // console.log("llamando al servicio");
 
     this.equipo = []
     this.http.get('https://portafolio-665c0-default-rtdb.europe-west1.firebasedatabase.app/equipo.json')
@@ -45,9 +47,8 @@ export class InfoPaginaService {
           this.equipo = data;
           this.loading = false;
       }
-    )   
-
-
-
+    )  
   }
+
+
 }
