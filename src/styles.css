@@ -46,3 +46,10 @@ svg path,
 svg rect{
   fill: black;
 }
+
+.ae-masonry__item{
+
+  border:1px solid #ccc;
+  min-height: 200px;
+
+}
