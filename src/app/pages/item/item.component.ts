@@ -24,10 +24,16 @@ export class ItemComponent {
     this._route.paramMap
       .pipe(
         tap((data:any)=>{
-          this.imgProduct = 'assets/img/'+data.params.id+'.jpg'
-          this.imgProduct2 = 'assets/img/'+data.params.id+'/pic-1.jpg'
-          this.imgProduct3 = 'assets/img/'+data.params.id+'/pic-2.jpg'
-          this.photo       = 'assets/img/'+data.params.id+'/main.jpg'
+          // this.imgProduct = 'assets/img/'+data.params.id+'.jpg'
+          // this.imgProduct2 = 'assets/img/'+data.params.id+'/pic-1.jpg'
+          // this.imgProduct3 = 'assets/img/'+data.params.id+'/pic-2.jpg'
+          // this.photo       = 'assets/img/'+data.params.id+'/main.jpg'
+          let url = 'https://raw.githubusercontent.com/fssmartin/portafolioAngular/refs/heads/main/docs/assets/img/'
+          this.imgProduct = url+data.params.id+'.jpg'
+          this.imgProduct2 = url+data.params.id+'/pic-1.jpg'
+          this.imgProduct3 = url+data.params.id+'/pic-2.jpg'
+          this.photo       = url+data.params.id+'/main.jpg'
+          
         }),
         switchMap(
           (data:any)=> _dataProducts.getDataAllProd(data.params.id)

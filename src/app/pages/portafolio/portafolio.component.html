@@ -31,8 +31,8 @@
         <a  *ngFor="let product of  _productosService.productos   ; let i=index"     
           [routerLink]="['/item', product.cod]"
           class="animated fadeIn rk-item ae-masonry__item">
-          <img [src]="'./assets/img/'+product.url+'.jpg'" alt="">
-
+          <!-- <img [src]="'./assets/img/'+product.url+'.jpg'" alt=""> -->
+          <img [src]="'https://raw.githubusercontent.com/fssmartin/portafolioAngular/refs/heads/main/docs/assets/img/'+product.url+'.jpg'" alt="">          
           <div class="item-meta">
             <h2>{{product.titulo}}</h2> 
             <p>{{product.categoria}}</p>
