@@ -19,14 +19,18 @@
           <li class="rk-menu__item" routerLinkActive="active"><a routerLink="portafolio" class="rk-menu__link">Portfolio</a></li>
           <li class="rk-menu__item"routerLinkActive="active"><a routerLink="about" class="rk-menu__link">About</a></li>          
         </ul>
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="fer-search" class="rk-search-field">
+        <div class="rk-search">
+          <input type="text" placeholder="Search"
+                  (keyup.enter)="lanzarSearch(search.value)" 
+                  id="fer-search" class="rk-search-field"
+                  #search
+                  />
           <label for="fer-search">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>
           </label>
-        </form>
+        </div>
       </nav>
     </div>
   </header>

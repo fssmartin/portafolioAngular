@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductAll {
     categoria?: string
     desc1?: string
     desc2?: string
@@ -10,8 +10,8 @@ export interface Product {
  
 
 export interface Producto {
-  categoria: string
-  cod: string
-  titulo: string
-  url: string
+  categoria?: string
+  cod?: string
+  titulo?: string
+  url?: string
 }
