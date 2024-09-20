@@ -25,7 +25,7 @@ export class InfoPaginaService {
       this.loading = true;
 
 
-      this.http.get('../../assets/data/db.json')
+      this.http.get('https://raw.githubusercontent.com/fssmartin/portafolioAngular/refs/heads/main/docs/assets/data/db.json')
       .subscribe(
         (data:InfoPagina) => {
             // console.log(data)
